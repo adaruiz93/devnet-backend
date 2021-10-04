@@ -44,6 +44,15 @@ router.delete('/:id', async (req, res) => {
   }
 })
 
+//UPDATE
+router.put('/:id', async (req, res) => {
+  try {
+    const updateDev = await Devnet.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    res.status(200).json(updateDev)
+  } catch(err) {
+    res.status(400).json({ error: err.message })
+  }
+})
 
 
 module.exports = router
