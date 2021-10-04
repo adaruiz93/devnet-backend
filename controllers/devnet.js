@@ -14,6 +14,16 @@ router.get('/', async (req,res) =>{
   }
 })
 
+//SHOW 
+router.get('/:id', async (req, res) => {
+  try {
+    const findDev = await Devnet.findById(req.params.id)
+    res.status(200).json(findDev)
+  } catch(err) {
+    res.status(400).json({ error: err.message })
+  }
+})
+
 //CREATE / POST
 router.post('/', async (req, res) => {
   try{
