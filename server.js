@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 require('./db/db')
+const devnetController = require('./controllers/devnet')
 
 //config
 const app = express()
@@ -22,7 +23,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions))
 app.use(express.json())
-
+app.use('/devnet', devnetController)
 
 
 //listener
