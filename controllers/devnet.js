@@ -6,6 +6,11 @@ const Devnet = require('../models/devnet')
 //get routes
 //index
 router.get('/', async (req,res) =>{
-  res.send('hi')
+  try{
+    const allDevs = await Devnet.find()
+    res.status(200).json(allDevs)
+  } catch(err) {
+    res.status(400).json({ error: err.message })
+  }
 })
 module.exports = router
