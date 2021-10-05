@@ -1,20 +1,22 @@
 const mongoose = require('mongoose')
 
-const devnetSchema = new mongoose.Schema({
-  role:{ 
+const devnetSchema = mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  role: {
     type: String,
     required: true
   },
   company: {
-    type: String,
+    type: String
   },
   questionType: {
-    type: String,
-    required: true
+    type: String
   },
   question: {
-    type: String,
-    required: true
+    type: String
   },
   details: {
     type: String
@@ -25,8 +27,6 @@ const devnetSchema = new mongoose.Schema({
   tags: {
     type: [String]
   }
-  
-}, {timestamps: true})
-
+}, {timestamp: true})
 
 module.exports = mongoose.model('Devnet', devnetSchema)
