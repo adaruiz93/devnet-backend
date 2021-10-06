@@ -10,7 +10,7 @@ const app = express()
 const PORT = process.env.PORT || 9000
 
 //middleware
-const whiteList = ["http://localhost:3000"]
+const whiteList = ["http://localhost:3000", "https://thedevnet.herokuapp.com/"]
 const corsOptions = {
   origin: (origin, callback) => {
     if (whiteList.includes(origin) || !origin) {
