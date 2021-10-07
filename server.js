@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 9000
 
 
 //middleware
-const whiteList = ["http://localhost:3000", "https://thedevnet.herokuapp.com"]
+const whiteList = ["http://localhost:3000", "https://thedevnet.herokuapp.com", "https://front-devnet.surge.sh"]
 const corsOptions = {
   origin: (origin, callback) => {
     if (whiteList.includes(origin) || !origin) {
