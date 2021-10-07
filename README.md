@@ -1,4 +1,4 @@
-# DevNet Backend
+# DevNet Back End
 
 # Description
 This is the back end repo for the collaborative GA group project number 3.
@@ -33,9 +33,3 @@ Mongoose API, Express, Node, JavaScript
 3. If you received the confirmation message in your terminal, you're good to move on to starting the front end repo, found [here:](https://github.com/adaruiz93/devnet-frontend)  
 ![terminal success confirmation message](/planning/terminal-success.png)
 4. Be sure to run the front end steps in a new terminal window with the back end server still running or you will receive an error.
-
-#Contribution Guidelines
-This section should offer guidance on where and how users can contribute to your code, identify bugs, and propose improvements
-Good links to include are:
-A link to the project's main repository
-A link to the project's issue tracker
